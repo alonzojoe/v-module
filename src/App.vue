@@ -1,5 +1,5 @@
 <script>
-import { ref, onMounted, onBeforeMount, watch } from 'vue';
+import { ref, onMounted, onBeforeMount, watch, watchEffect } from 'vue';
 import Card from './components/Card.vue'
 
 export default {
@@ -66,6 +66,14 @@ export default {
         alert('You reached the limit');
       }
     })
+
+    watchEffect(() => {
+      numericData.value
+      if (numericData.value == 4) {
+         alert('this is watch effect')
+      }
+    })
+    
 
 
 

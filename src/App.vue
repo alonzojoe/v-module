@@ -62,7 +62,7 @@ export default {
     const numericData = ref(0)
 
     watch(numericData, (oldValue, newValue) => {
-      if (newValue === 3) {
+      if (oldValue === 3) {
         alert('You reached the limit');
       }
     })
